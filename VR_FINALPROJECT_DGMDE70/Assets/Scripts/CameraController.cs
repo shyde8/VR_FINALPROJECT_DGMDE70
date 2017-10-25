@@ -23,6 +23,7 @@ public class CameraController : MonoBehaviour {
 
     private float direction = 1;
     private GameObject cameraRig;
+    private Color originalColor;
 
     private void Start() {
         GameObject container = new GameObject();
@@ -40,14 +41,16 @@ public class CameraController : MonoBehaviour {
         cameraRig.transform.position = transform.position;
         cameraRig.transform.rotation = transform.rotation;
         cameraRig.transform.Rotate(cameraRotation, 0, 0);
-        
+
+        originalColor = RenderSettings.ambientLight;
+
     }
 
     void Update() {
 
 
         Vector3 rotationVector = transform.localRotation.eulerAngles;
-        Debug.Log(rotationVector.y);
+        
         
         if ( clockWiseRotation && rotationVector.y > rotationLimit) {
             direction = direction * -1;
@@ -72,12 +75,22 @@ public class CameraController : MonoBehaviour {
 
 
         if (targetObject.collider != null) {
-            Debug.Log(targetObject.collider);
+            if (targetObject.collider.CompareTag("PVR")) {
+                StartCoroutine(TriggerAlarm());
+                
+            }
+            
+            
         }
 
+    }
 
 
-
-
+    IEnumerator TriggerAlarm() {
+        
+        RenderSettings.ambientLight = Color.red;
+        yield return new WaitForSeconds(1);
+        Debug.Log(originalColor);
+        RenderSettings.ambientLight = originalColor;
     }
 }
