@@ -48,10 +48,13 @@ public class CameraController : MonoBehaviour {
 
         Vector3 rotationVector = transform.localRotation.eulerAngles;
         Debug.Log(rotationVector.y);
-
-        if (rotationVector.y > rotationLimit || rotationVector.y < 0) {
+        
+        if ( clockWiseRotation && rotationVector.y > rotationLimit) {
+            direction = direction * -1;
+        } else  if (!clockWiseRotation && rotationVector.y < (360 - rotationLimit)) {
             direction = direction * -1;
         }
+     
         
         float rotation = rotateSpeed * Time.deltaTime * direction;
         transform.Rotate(new Vector3(0, rotation, 0));
