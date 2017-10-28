@@ -26,12 +26,21 @@ public class ShootingController : MonoBehaviour {
         if (raycastHitInfo.collider) {
             Debug.Log(raycastHitInfo.collider);
             pointer.transform.position = raycastHitInfo.collider.transform.position;
-            pointer.transform.Translate(new Vector3(0,-1f,0));
+            pointer.transform.Translate(new Vector3(0,1f,0));
+            if (Input.GetMouseButtonDown(0)) {
+                OpenDoor ods = (OpenDoor)raycastHitInfo.collider.gameObject.GetComponent(typeof(OpenDoor));
+                if(ods!=null){
+                    ods.openDoor();
+                }
+                
+            }
           //  GameObject.Destroy(raycastHitInfo.collider.transform.gameObject);
         }
 
+        
         if (Input.GetMouseButtonDown(0)) {
             Debug.DrawLine(transform.position, transform.forward, Color.red);
+
         }
         
 	}
