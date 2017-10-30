@@ -7,15 +7,23 @@ public class InteractiveConsoleSphere : MonoBehaviour {
     [SerializeField]
     private Color sphereColor = Color.magenta;
 
-    
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private GameObject doorLock;
+
+    private LockInputController lockInput;
+
+    private float inputValue = -1;
+
+    private void DoInputToLock() {
+        lockInput.addInput(inputValue);
+    }
+
+    // Use this for initialization
+    void Start () {
         Renderer rend = GetComponent<Renderer>();
-        rend.material.color = sphereColor;        
+        rend.material.color = sphereColor;
+        lockInput = (LockInputController)doorLock.GetComponent(typeof(LockInputController));        
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
