@@ -25,8 +25,15 @@ public class ShootingController : MonoBehaviour {
 
         if (raycastHitInfo.collider) {
             Debug.Log(raycastHitInfo.collider);
-            pointer.transform.position = raycastHitInfo.collider.transform.position;
-            pointer.transform.Translate(new Vector3(0,1f,0));
+            if (raycastHitInfo.collider.CompareTag("Taggable")) {
+                pointer.gameObject.SetActive(true);
+                pointer.transform.position = raycastHitInfo.collider.transform.position;
+                pointer.transform.Translate(new Vector3(0, 1f, 0));
+            } else {
+                pointer.gameObject.SetActive(false);
+            }
+
+            
             if (Input.GetMouseButtonDown(0)) {
                 OpenDoor ods = (OpenDoor)raycastHitInfo.collider.gameObject.GetComponent(typeof(OpenDoor));
                 if(ods!=null){
