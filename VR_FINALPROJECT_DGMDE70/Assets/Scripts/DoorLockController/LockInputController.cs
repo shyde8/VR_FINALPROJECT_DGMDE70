@@ -4,24 +4,42 @@ using UnityEngine;
 
 public class LockInputController : MonoBehaviour {
 
-    private float[] targetInput;
+    [SerializeField]
+    private GameObject slotMachine;
+
+    private int[] targetInput;
+    private LockCodeGenerationController lockCodeGenerationController;
 
     void Start() {
-        targetInput = new float[4];
+        targetInput = new int[4];
         resetInput();
+        lockCodeGenerationController = slotMachine.GetComponent<LockCodeGenerationController>();
     }
 
 
-    public void addInput(float value) {
+    public void addInput(int value) {
+        
+       
 
-        if (targetInput[3] != -1) {
-            resetInput();
-        }
         for (int inputIndex = 0; inputIndex < targetInput.Length; inputIndex++) {
             if (targetInput[inputIndex] == -1) {
                 targetInput[inputIndex] = value;
-            }
+                break;
+            }            
         }
+
+        if (targetInput[3] != -1) {
+            lockCodeGenerationController.CompareCode(targetInput);
+            string debugLine = "";
+            for (int inputIndex = 0; inputIndex < targetInput.Length; inputIndex++) {
+                debugLine += ("-" + targetInput[inputIndex]);
+            }
+            Debug.Log(debugLine);
+            resetInput();
+        }
+
+
+
 
     }
 

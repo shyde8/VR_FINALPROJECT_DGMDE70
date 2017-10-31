@@ -8,6 +8,9 @@ public class ShootingController : MonoBehaviour {
     private float distance = 5;
 
     [SerializeField]
+    private float yPositionIncrease = 5;
+
+    [SerializeField]
     private GameObject pointer;
 
 
@@ -24,22 +27,28 @@ public class ShootingController : MonoBehaviour {
         Physics.Raycast(transform.position, transform.forward, out raycastHitInfo, distance);
 
         if (raycastHitInfo.collider) {
-            Debug.Log(raycastHitInfo.collider);
+            
             if (raycastHitInfo.collider.CompareTag("Taggable")) {
                 pointer.gameObject.SetActive(true);
                 pointer.transform.position = raycastHitInfo.collider.transform.position;
-                pointer.transform.Translate(new Vector3(0, 1f, 0));
+                pointer.transform.Translate(new Vector3(0, yPositionIncrease, 0));
             } else {
                 pointer.gameObject.SetActive(false);
             }
 
             
             if (Input.GetMouseButtonDown(0)) {
+
+                InteractiveConsoleSphere ics = raycastHitInfo.collider.gameObject.GetComponent<InteractiveConsoleSphere>();
+                if (ics != null) {                    
+                    ics.DoInputToLock();
+                }
+                /*
                 OpenDoor ods = (OpenDoor)raycastHitInfo.collider.gameObject.GetComponent(typeof(OpenDoor));
                 if(ods!=null){
                     ods.openDoor();
                 }
-                
+                */
             }
           //  GameObject.Destroy(raycastHitInfo.collider.transform.gameObject);
         }

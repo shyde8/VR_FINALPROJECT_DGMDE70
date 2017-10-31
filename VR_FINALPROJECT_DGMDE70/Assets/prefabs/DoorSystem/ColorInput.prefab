@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereColor: {r: 0.6838235, g: 0.12067473, b: 0.12067473, a: 1}
+  doorLock: {fileID: 0}
 --- !u!135 &135024728725940512
 SphereCollider:
   m_ObjectHideFlags: 1

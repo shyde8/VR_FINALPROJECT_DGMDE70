@@ -10,11 +10,12 @@ public class InteractiveConsoleSphere : MonoBehaviour {
     [SerializeField]
     private GameObject doorLock;
 
+    [SerializeField]
+    private int inputValue = -1;
+
     private LockInputController lockInput;
 
-    private float inputValue = -1;
-
-    private void DoInputToLock() {
+    public void DoInputToLock() {
         lockInput.addInput(inputValue);
     }
 
@@ -22,7 +23,8 @@ public class InteractiveConsoleSphere : MonoBehaviour {
     void Start () {
         Renderer rend = GetComponent<Renderer>();
         rend.material.color = sphereColor;
-        lockInput = (LockInputController)doorLock.GetComponent(typeof(LockInputController));        
+        lockInput = transform.parent.gameObject.GetComponent<LockInputController>();
+        //lockInput = (LockInputController)doorLock.GetComponent(typeof(LockInputController));        
     }
 	
 	

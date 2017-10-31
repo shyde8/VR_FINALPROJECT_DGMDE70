@@ -10,11 +10,16 @@ public class DoorController : MonoBehaviour {
     [SerializeField]
     private float speed = 5;
 
+    private bool openDoor;
+
     private void Update() {
-        OpenDoor();
+
+        if (openDoor) {
+            transform.position = Vector3.Lerp(transform.position, positionTarget.transform.position, Time.deltaTime);
+        }
     }
 
     public void OpenDoor() {
-        transform.position = Vector3.Lerp(transform.position, positionTarget.transform.position, Time.deltaTime);
+        openDoor = true;
     }
 }
