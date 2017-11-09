@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: c5afe2163327252469f0deb1174afccd
+timeCreated: 1510194960
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Alien_Blue1
+    100002: Alien_Green1
+    100004: Alien_Red1
+    100006: Alien_Yellow1
+    100008: //RootNode
+    100010: pCube1
+    100012: pCube2
+    100014: pCube3
+    100016: pCube4
+    400000: Alien_Blue1
+    400002: Alien_Green1
+    400004: Alien_Red1
+    400006: Alien_Yellow1
+    400008: //RootNode
+    400010: pCube1
+    400012: pCube2
+    400014: pCube3
+    400016: pCube4
+    2300000: Alien_Blue1
+    2300002: Alien_Green1
+    2300004: Alien_Red1
+    2300006: Alien_Yellow1
+    2300008: pCube1
+    2300010: pCube2
+    2300012: pCube3
+    2300014: pCube4
+    3300000: Alien_Blue1
+    3300002: Alien_Green1
+    3300004: Alien_Red1
+    3300006: Alien_Yellow1
+    3300008: pCube1
+    3300010: pCube2
+    3300012: pCube3
+    3300014: pCube4
+    4300000: Alien_Blue1
+    4300002: Alien_Red1
+    4300004: Alien_Yellow1
+    4300006: Alien_Green1
+    4300008: pCube1
+    4300010: pCube2
+    4300012: pCube3
+    4300014: pCube4
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alien_BlueConverterShader1
+    second: {fileID: 2100000, guid: ae73fb3145ed57043a1d476557383189, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alien_GreenConverterShader1
+    second: {fileID: 2100000, guid: f580c8854ed80f84588c15e7b0b02f4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alien_RedConverterShader1
+    second: {fileID: 2100000, guid: f6ce489ea5e714b4598d9bf97cd21d98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alien_YellowConverterShader5
+    second: {fileID: 2100000, guid: ed9d14aba4cb31d48af8ca52d84217bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 58558cea25570864f9e5b27f81322ee3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
