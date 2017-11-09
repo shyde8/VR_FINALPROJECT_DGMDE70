@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -15,6 +16,7 @@ public class Weapon : MonoBehaviour
 	public enum ShootMode {Auto, Semi }
 	public ShootMode shootingMode;
 
+	public Text ammoText;
 	public Transform shootPoint;
 	public GameObject hitParticles;
 	public GameObject bulletImpact;
@@ -44,6 +46,8 @@ public class Weapon : MonoBehaviour
 
 		originalPosition = transform.localPosition;
 
+		UpdateAmmoText();
+
 	}
 
 	// Update is called once per frame
@@ -70,7 +74,7 @@ public class Weapon : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.R)) 
 		{
 			if(currentBullets < bulletsPerMag && bulletsLeft > 0)
-			DoReload ();
+				DoReload ();
 		}
 		if (fireTimer < fireRate)
 			fireTimer += Time.deltaTime;
@@ -86,7 +90,7 @@ public class Weapon : MonoBehaviour
 		anim.SetBool ("Aim", isAiming);
 
 		//if (info.IsName ("Fire"))
-			//anim.SetBool ("Fire", false);
+		//anim.SetBool ("Fire", false);
 	}
 
 	private void AimDownSights()
@@ -128,6 +132,7 @@ public class Weapon : MonoBehaviour
 		muzzleFlash.Play();
 		PlayShootSound();
 		currentBullets--;
+		UpdateAmmoText();
 		fireTimer = 0.0f; //Reset fire timer
 
 	}
@@ -142,6 +147,7 @@ public class Weapon : MonoBehaviour
 
 		bulletsLeft -= bulletsToDeduct;
 		currentBullets += bulletsToDeduct;
+		UpdateAmmoText();
 	}
 
 	private void DoReload()
@@ -158,6 +164,11 @@ public class Weapon : MonoBehaviour
 		_AudioSource.PlayOneShot (shootSound);
 		//_AudioSource.clip = shootSound;
 		//_AudioSource.Play();
+	}
+
+	private void UpdateAmmoText()
+	{
+		ammoText.text = currentBullets + "/" + bulletsLeft;
 	}
 
 }

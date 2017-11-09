@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: cc6197abd249ccc4d9cbffe0c25fb938
+timeCreated: 1510194962
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: bola
+    100002: cerradura1
+    100004: cerradura2
+    100006: door1
+    100008: door1 1
+    100010: door2
+    100012: door2left
+    100014: door2lefthandle
+    100016: door2right
+    100018: door2righthandle
+    100020: //RootNode
+    100022: palanca1
+    100024: palanca2
+    100026: palanca3
+    100028: palancas
+    100030: seguro1
+    100032: seguro2
+    400000: bola
+    400002: cerradura1
+    400004: cerradura2
+    400006: door1
+    400008: door1 1
+    400010: door2
+    400012: door2left
+    400014: door2lefthandle
+    400016: door2right
+    400018: door2righthandle
+    400020: //RootNode
+    400022: palanca1
+    400024: palanca2
+    400026: palanca3
+    400028: palancas
+    400030: seguro1
+    400032: seguro2
+    2300000: bola
+    2300002: cerradura1
+    2300004: cerradura2
+    2300006: door1 1
+    2300008: door2left
+    2300010: door2lefthandle
+    2300012: door2right
+    2300014: door2righthandle
+    2300016: palanca1
+    2300018: palanca2
+    2300020: palanca3
+    2300022: palancas
+    2300024: seguro1
+    2300026: seguro2
+    3300000: bola
+    3300002: cerradura1
+    3300004: cerradura2
+    3300006: door1 1
+    3300008: door2left
+    3300010: door2lefthandle
+    3300012: door2right
+    3300014: door2righthandle
+    3300016: palanca1
+    3300018: palanca2
+    3300020: palanca3
+    3300022: palancas
+    3300024: seguro1
+    3300026: seguro2
+    4300000: door1
+    4300002: bola
+    4300004: palancas
+    4300006: palanca1
+    4300008: palanca2
+    4300010: palanca3
+    4300012: door2left
+    4300014: door2lefthandle
+    4300016: door2right
+    4300018: cerradura1
+    4300020: seguro1
+    4300022: cerradura2
+    4300024: seguro2
+    4300026: door2righthandle
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert26
+    second: {fileID: 2100000, guid: 2c1bc5671b8ffda48a192df5b3455787, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert27
+    second: {fileID: 2100000, guid: b8ace49c28b71fa42b91c4e01b495d8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert28
+    second: {fileID: 2100000, guid: a4bb0774e48a234419a43adf9f9ab457, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__lambert22
+    second: {fileID: 2100000, guid: cb11cd05ff145c745b02739e201a19dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__lambert24
+    second: {fileID: 2100000, guid: 2c1bc5671b8ffda48a192df5b3455787, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
