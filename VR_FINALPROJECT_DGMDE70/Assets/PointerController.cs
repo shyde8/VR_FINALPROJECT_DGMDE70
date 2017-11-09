@@ -13,8 +13,13 @@ public class PointerController : MonoBehaviour {
         generatorController = generator.GetComponent<GeneratorController>();
     }
 
-    private void OnTriggerStay(Collider other) {        
-        if (Input.GetKeyDown("1")) {
+    private void Update() {
+       
+    }
+
+    private void OnTriggerStay(Collider other) {
+       
+        if (Input.GetButtonDown("PSCR_A")) {
             generatorController.AddToken(other);
         }
     }
