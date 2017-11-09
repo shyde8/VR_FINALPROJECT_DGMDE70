@@ -13,10 +13,11 @@ public class PointerController : MonoBehaviour {
         generatorController = generator.GetComponent<GeneratorController>();
     }
 
-    private void OnTriggerEnter(Collider other) {
-
+    private void OnTriggerStay(Collider other) {        
         if (Input.GetKeyDown("1")) {
             generatorController.AddToken(other);
         }
     }
+
+  
 }
