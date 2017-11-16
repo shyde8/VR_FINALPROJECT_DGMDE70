@@ -37,7 +37,7 @@ public class ShootingController : MonoBehaviour {
             }
 
             
-            if (Input.GetMouseButtonDown(0)) {
+            if (GetPlayerInput("X") == 1) {
 
                 InteractiveConsoleSphere ics = raycastHitInfo.collider.gameObject.GetComponent<InteractiveConsoleSphere>();
                 if (ics != null) {                    
@@ -58,6 +58,22 @@ public class ShootingController : MonoBehaviour {
             Debug.DrawLine(transform.position, transform.forward, Color.red);
 
         }
-        
-	}
+
+        private int GetPlayerInput(string val)
+        {
+            if (IsPressed("PSCR_" + val) && IsPressed("PVR_" + val)) {
+                return 1;
+            } else if (!IsPressed("PVR_" + val) && IsPressed("PSCR_" + val)) {
+                return 2;
+            } else {
+                return 0;
+            }
+        }
+
+        private bool IsPressed(string val)
+        {
+            return Input.GetButtonDown(val);
+        }
+
+    }
 }
