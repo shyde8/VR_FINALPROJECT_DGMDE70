@@ -14,14 +14,34 @@ public class PointerController : MonoBehaviour {
     }
 
     private void Update() {
+      
+
+
+        
        
+
+
     }
 
     private void OnTriggerStay(Collider other) {
-       
-        if (Input.GetButtonDown("PSCR_A")) {
+       if (GetPlayerInput("A") == 2) {
             generatorController.AddToken(other);
+       }
+
+    }
+
+    private int GetPlayerInput(string val) {
+        if (IsPressed("PSCR_" + val) && IsPressed("PVR_" + val)) {
+            return 1;
+        } else if (!IsPressed("PVR_" + val) && IsPressed("PSCR_" + val)) {
+            return 2;
+        } else {
+            return 0;
         }
+    }
+
+    private bool IsPressed(string val) {
+        return Input.GetButtonDown(val);        
     }
 
   

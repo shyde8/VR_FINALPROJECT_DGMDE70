@@ -36,7 +36,9 @@ public class Weapon : MonoBehaviour
 	private Vector3 originalPosition;
 	public Vector3 aimPosition;
 	public float aodSpeed = 8f;
+    
 
+    
 	// Use this for initialization
 	void Start()
 	{
@@ -47,8 +49,9 @@ public class Weapon : MonoBehaviour
 		originalPosition = transform.localPosition;
 
 		UpdateAmmoText();
+        
 
-	}
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -63,7 +66,7 @@ public class Weapon : MonoBehaviour
 			break;		
 		}
 
-		if (shootInput)
+		if (GetPlayerInput("A") == 1)
 		{
 			if (currentBullets > 0)
 				Fire ();
@@ -170,5 +173,19 @@ public class Weapon : MonoBehaviour
 	{
 		ammoText.text = currentBullets + "/" + bulletsLeft;
 	}
+
+    private int GetPlayerInput(string val) {
+        if (IsPressed("PSCR_" + val) && IsPressed("PVR_" + val)) {
+            return 1;
+        } else if (!IsPressed("PVR_" + val) && IsPressed("PSCR_" + val)) {
+            return 2;
+        } else {
+            return 0;
+        }
+    }
+
+    private bool IsPressed(string val) {
+        return Input.GetButtonDown(val);
+    }
 
 }
