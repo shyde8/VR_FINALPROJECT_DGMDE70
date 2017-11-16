@@ -22,4 +22,8 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
         agent.SetDestination(player.transform.position);
 	}
+
+    public void SetPlayer(GameObject player) {
+        this.player = player;
+    }
 }

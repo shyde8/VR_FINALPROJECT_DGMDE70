@@ -21,9 +21,14 @@ public class CameraController : MonoBehaviour {
     [SerializeField]
     private bool clockWiseRotation = true;
 
+    [SerializeField]
+    private GameObject enemy;
+
     private float direction = 1;
     private GameObject cameraRig;
     private Color originalColor;
+
+    
 
     private void Start() {
         GameObject container = new GameObject();
@@ -76,13 +81,25 @@ public class CameraController : MonoBehaviour {
 
         if (targetObject.collider != null) {
             if (targetObject.collider.CompareTag("PVR")) {
-                StartCoroutine(TriggerAlarm());
+               
                 
             }
             
             
         }
 
+    }
+
+
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log("TRI");
+        if (other.CompareTag("PVR")) {
+            GameObject ne = Instantiate(enemy);
+            ne.gameObject.transform.position = transform.position;
+            ne.GetComponent<EnemyController>().SetPlayer(other.gameObject);
+            
+            StartCoroutine(TriggerAlarm());
+        }
     }
 
 
