@@ -59,21 +59,21 @@ public class ShootingController : MonoBehaviour {
 
         }
 
-        private int GetPlayerInput(string val)
-        {
-            if (IsPressed("PSCR_" + val) && IsPressed("PVR_" + val)) {
-                return 1;
-            } else if (!IsPressed("PVR_" + val) && IsPressed("PSCR_" + val)) {
-                return 2;
-            } else {
-                return 0;
-            }
-        }
+       
 
-        private bool IsPressed(string val)
-        {
-            return Input.GetButtonDown(val);
-        }
+    }
 
+    private int GetPlayerInput(string val) {
+        if (IsPressed("PSCR_" + val) && IsPressed("PVR_" + val)) {
+            return 1;
+        } else if (!IsPressed("PVR_" + val) && IsPressed("PSCR_" + val)) {
+            return 2;
+        } else {
+            return 0;
+        }
+    }
+
+    private bool IsPressed(string val) {
+        return Input.GetButtonDown(val);
     }
 }
