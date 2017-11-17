@@ -24,7 +24,7 @@ public class PointerController : MonoBehaviour {
     }
 
     private void OnTriggerStay(Collider other) {
-       if (GetPlayerInput("A") == 2) {
+       if (GetPlayerInput("A") == 1) {
             generatorController.AddToken(other);
        }
 

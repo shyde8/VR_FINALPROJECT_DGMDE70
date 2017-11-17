@@ -18,7 +18,7 @@ public class LockInputController : MonoBehaviour {
 
 
     public void addInput(int value) {
-        
+		Debug.Log ("INPUT");
        
 
         for (int inputIndex = 0; inputIndex < targetInput.Length; inputIndex++) {

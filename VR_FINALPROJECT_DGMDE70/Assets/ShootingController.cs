@@ -37,8 +37,8 @@ public class ShootingController : MonoBehaviour {
             }
 
             
-            if (GetPlayerInput("X") == 1) {
-
+            if (GetPlayerInput("X") == 2) {
+				
                 InteractiveConsoleSphere ics = raycastHitInfo.collider.gameObject.GetComponent<InteractiveConsoleSphere>();
                 if (ics != null) {                    
                     ics.DoInputToLock();

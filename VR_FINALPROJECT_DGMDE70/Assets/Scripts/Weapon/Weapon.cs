@@ -66,12 +66,32 @@ public class Weapon : MonoBehaviour
 			break;		
 		}
 
-		if (GetPlayerInput("A") == 1)
+		if (GetPlayerInput("A") == 2)
 		{
-			if (currentBullets > 0)
+			if (currentBullets > 0) {
 				Fire ();
-			else if (bulletsLeft > 0)
+
+
+				Vector3 rayOrigin = transform.position;
+				Vector3 rayTarget = transform.forward;
+
+				RaycastHit targetObject;
+				Physics.Raycast(rayOrigin, rayTarget, out targetObject, 1000);
+
+				if (targetObject.collider != null) {
+					Debug.Log ("1");
+					if (targetObject.collider.CompareTag("Enemy")) {
+						Debug.Log ("12");
+						Destroy (targetObject.collider.gameObject);
+
+					}
+
+
+				}
+
+			} else if (bulletsLeft > 0) {
 				DoReload ();
+			}
 		}
 
 		if (Input.GetKeyDown (KeyCode.R)) 
