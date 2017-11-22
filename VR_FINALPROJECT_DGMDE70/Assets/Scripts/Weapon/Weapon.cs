@@ -118,7 +118,8 @@ public class Weapon : MonoBehaviour
 
 	private void AimDownSights()
 	{
-		if (Input.GetButton ("Fire2") && !isReloading) 
+		//shyde, changing to detect "PVR_LeftTrigger", 11/22
+		if ((Input.GetAxis ("PVR_LeftTrigger")>.1) && !isReloading) 
 		{
 			transform.localPosition = Vector3.Lerp (transform.localPosition, aimPosition, Time.deltaTime * aodSpeed);
 			isAiming = true;

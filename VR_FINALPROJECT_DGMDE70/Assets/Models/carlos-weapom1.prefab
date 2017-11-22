@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 54336919742522976}
   - component: {fileID: 82020586305382440}
   m_Layer: 0
-  m_Name: player
+  m_Name: carlos-weapom1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
