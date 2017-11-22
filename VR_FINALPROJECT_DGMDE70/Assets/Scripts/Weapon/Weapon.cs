@@ -66,7 +66,8 @@ public class Weapon : MonoBehaviour
 			break;		
 		}
 
-		if (GetPlayerInput("A") == 2)
+		//shyde, changing to detect "PVR_LeftTrigger", 11/22
+		if ((Input.GetAxis ("PVR_RightTrigger")>.05))
 		{
 			if (currentBullets > 0) {
 				Fire ();
