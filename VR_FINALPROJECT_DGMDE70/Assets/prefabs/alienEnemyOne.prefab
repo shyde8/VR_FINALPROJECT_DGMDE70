@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 114645703029112928}
   - component: {fileID: 54675823518695080}
   - component: {fileID: 65415432482221024}
+  - component: {fileID: 114783725304631020}
   m_Layer: 0
   m_Name: alienEnemyOne
   m_TagString: Enemy
@@ -1282,6 +1283,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &114783725304631020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885874354204846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4d46e320db7ea4a877ada9b53b1661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDamaging: 1
+  damage: 10
 --- !u!137 &137687767856288886
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
