@@ -8,9 +8,13 @@ public class PointerController : MonoBehaviour {
     private GameObject generator;
 
     private GeneratorController generatorController;
+    private AudioSource collitionFeedbackSound;
+
+
 
     private void Start() {
         generatorController = generator.GetComponent<GeneratorController>();
+        collitionFeedbackSound = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -23,9 +27,22 @@ public class PointerController : MonoBehaviour {
 
     }
 
+    private void OnTriggerEnter(Collider other) {
+        Renderer rend = GetComponent<Renderer>();
+        rend.material.color = Color.red;
+    }
+
+    private void OnTriggerExit(Collider other) {
+        Renderer rend = GetComponent<Renderer>();
+        rend.material.color = Color.green;
+    }
+
+
+
     private void OnTriggerStay(Collider other) {
        if (GetPlayerInput("A") == 1) {
             generatorController.AddToken(other);
+            collitionFeedbackSound.Play();
        }
 
     }
