@@ -83,8 +83,8 @@ public class Weapon : MonoBehaviour
 					Debug.Log ("1");
 					if (targetObject.collider.CompareTag("Enemy")) {
 						Debug.Log ("12");
-						Destroy (targetObject.collider.gameObject);
-
+						//shyde 12/3/2017, commenting out this damage condition
+						//Destroy (targetObject.collider.gameObject);
 					}
 
 
