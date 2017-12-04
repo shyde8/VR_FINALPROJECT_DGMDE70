@@ -9587,7 +9587,7 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: bd030665639be9c489c0cb9803573b0f, type: 3}
   fireRate: 0.15
   damage: 20
-  aimPosition: {x: -0.081, y: 0.0151, z: 0}
+  aimPosition: {x: -0.35, y: 0.0151, z: 0}
   aodSpeed: 8
 --- !u!82 &730151838
 AudioSource:
