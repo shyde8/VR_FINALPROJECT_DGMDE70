@@ -20,14 +20,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4567415370978870}
   - component: {fileID: 95638677981631616}
-  - component: {fileID: 114785043532780518}
+  - component: {fileID: 65141353739840892}
+  - component: {fileID: 114728892937113660}
   m_Layer: 0
   m_Name: blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1695752193804818
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +186,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1744342957289998}
   m_Mesh: {fileID: 4300004, guid: 5d577bb02140c6c4a9438fc4063c2673, type: 3}
+--- !u!65 &65141353739840892
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340591286684752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.15, z: 0.15}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95638677981631616
 Animator:
   serializedVersion: 3
@@ -202,7 +215,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114785043532780518
+--- !u!114 &114728892937113660
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -213,4 +226,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69c9f2cc09bbb64a8d49bb3e9ea8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 5
+  destroyTime: 30
+  rotateSpeed: 40
