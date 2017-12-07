@@ -13,6 +13,11 @@ public class LockInputController : MonoBehaviour {
     [SerializeField]
     private GameObject door;
 
+    private AudioSource feedbackSound;
+
+    [SerializeField]
+    private AudioClip positiveFeedback, errorFeedback;
+
     private DoorController doorController;
 
     void Start() {
@@ -20,6 +25,7 @@ public class LockInputController : MonoBehaviour {
         resetInput();
         lockCodeGenerationController = slotMachine.GetComponent<LockCodeGenerationController>();
         doorController = door.GetComponent<DoorController>();
+        feedbackSound = GetComponent<AudioSource>();
     }
 
 
@@ -43,10 +49,18 @@ public class LockInputController : MonoBehaviour {
 
 
         if (!lockCodeGenerationController.CompareCode(targetInput)) {
+            Debug.Log("Wrong input");
+            
+            feedbackSound.clip = errorFeedback;
+            feedbackSound.Play();
             resetInput();
-        } else if (targetInput[3] != -1) {
-            doorController.OpenDoor();
-
+        } else {
+            Debug.Log("Correct input");
+            feedbackSound.clip = positiveFeedback;             
+            feedbackSound.Play();
+            if (targetInput[3] != -1) {                
+                doorController.OpenDoor();
+            }
         }
 
 

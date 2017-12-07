@@ -18,6 +18,8 @@ public class LockCodeGenerationController : MonoBehaviour {
     [SerializeField]
     private int upperCodeGenLimit = 3;
 
+   
+
 
     private int[] selectedFaces;
 
@@ -34,7 +36,7 @@ public class LockCodeGenerationController : MonoBehaviour {
     public bool CompareCode(int[] code) {
         bool openDoor = true;
         for (int codeIndex = 0; codeIndex < code.Length; codeIndex++) {
-            if (code[codeIndex] != -1 || code[codeIndex] != selectedFaces[codeIndex]) {
+            if (code[codeIndex] != -1 && code[codeIndex] != selectedFaces[codeIndex]) {
                 openDoor = false;
                 break;
             }
