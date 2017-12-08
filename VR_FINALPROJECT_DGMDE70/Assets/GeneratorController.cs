@@ -11,7 +11,9 @@ public class GeneratorController : MonoBehaviour {
     private int[] slotValues;
 
     [SerializeField]
-    private GameObject shieldIcon, healthIcon;
+    private GameObject shieldIcon, healthIcon, errorScreen;
+
+
 
     private int shieldValue = 1, healthValue = 2;
 
@@ -71,9 +73,17 @@ public class GeneratorController : MonoBehaviour {
             //Debug.Log(slotValues[valuesIndex+1]);
             if (slotValues[valuesIndex] != slotValues[valuesIndex + 1] && slotValues[valuesIndex + 1] != 0) {
                 Debug.Log("YOU MADE A MISTAKE");
+                errorScreen.SetActive(true);
                 resetGenerator();
+                StartCoroutine(reEnable());
             } 
         }     
+    }
+
+    IEnumerator reEnable() {
+        yield return new WaitForSeconds(1);
+        errorScreen.SetActive(false);
+
     }
 
     private void resetGenerator() {
