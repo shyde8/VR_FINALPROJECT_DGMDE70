@@ -75,8 +75,15 @@ public class GeneratorController : MonoBehaviour {
                 Debug.Log("YOU MADE A MISTAKE");
                 errorScreen.SetActive(true);
                 resetGenerator();
+                StartCoroutine(reEnable());
             } 
         }     
+    }
+
+    IEnumerator reEnable() {
+        yield return new WaitForSeconds(1);
+        errorScreen.SetActive(false);
+
     }
 
     private void resetGenerator() {
