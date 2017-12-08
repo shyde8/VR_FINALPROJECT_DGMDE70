@@ -13,11 +13,14 @@ public class ShootingController : MonoBehaviour {
     [SerializeField]
     private GameObject pointer;
 
+    [SerializeField]
+    private GameObject indicator;
+
 
     // Use this for initialization
     void Start () {
-        
-	}
+        indicator.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -32,13 +35,15 @@ public class ShootingController : MonoBehaviour {
                 pointer.gameObject.SetActive(true);
                 pointer.transform.position = raycastHitInfo.collider.transform.position;
                 pointer.transform.Translate(new Vector3(0, yPositionIncrease, 0));
+                indicator.SetActive(true);
             } else {
                 pointer.gameObject.SetActive(false);
+                indicator.SetActive(false);
             }
 
             
-            if (GetPlayerInput("X") == 2) {
-				
+            if (GetPlayerInput("X") == 2 || Input.GetMouseButtonDown(0)) {
+                Debug.Log("Interaction player 1");
                 InteractiveConsoleSphere ics = raycastHitInfo.collider.gameObject.GetComponent<InteractiveConsoleSphere>();
                 if (ics != null) {                    
                     ics.DoInputToLock();

@@ -12,9 +12,15 @@ public class DoorController : MonoBehaviour {
 
     private bool openDoor;
 
+
+   
+
     private void Update() {
 
+        
+
         if (openDoor) {
+            transform.rotation = Quaternion.Lerp(transform.rotation, positionTarget.transform.rotation, Time.deltaTime);
             transform.position = Vector3.Lerp(transform.position, positionTarget.transform.position, Time.deltaTime);
         }
     }

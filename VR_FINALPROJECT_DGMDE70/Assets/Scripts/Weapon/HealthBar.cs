@@ -46,10 +46,11 @@ public class HealthBar : MonoBehaviour
 			hitPoint -= damage;
 		}
 
-		//placeholder to prevent scaling issues until we come up with GameOver scenario
-		if (hitPoint < 0) 
+		//call endGame() function within GameOver script, if health hits 0
+		if (hitPoint <= 0) 
 		{
 			hitPoint = 0;
+			FindObjectOfType<GameOver>().endGame ();
 		}
 
 		UpdateHealthBar();
