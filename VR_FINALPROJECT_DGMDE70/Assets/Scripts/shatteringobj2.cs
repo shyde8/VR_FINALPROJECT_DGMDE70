@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shatteringobj : MonoBehaviour {
+public class shatteringobj2 : MonoBehaviour {
 	Collider mycollider;
-	public GameObject myjarron1destruido;
+	public GameObject myjarron2destruido;
 	// Use this for initialization
 	void Start () {
 		mycollider = GetComponent<Collider>();
@@ -14,7 +14,7 @@ public class shatteringobj : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(mycollider.isTrigger == true){
-			Instantiate(myjarron1destruido, transform.position, transform.rotation);
+			Instantiate(myjarron2destruido, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}	}
 }
