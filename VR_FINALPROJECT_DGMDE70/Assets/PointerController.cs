@@ -8,24 +8,14 @@ public class PointerController : MonoBehaviour {
     private GameObject generator;
 
     private GeneratorController generatorController;
-    private AudioSource collitionFeedbackSound;
+    
 
 
 
     private void Start() {
-        generatorController = generator.GetComponent<GeneratorController>();
-        collitionFeedbackSound = GetComponent<AudioSource>();
+        generatorController = generator.GetComponent<GeneratorController>();       
     }
 
-    private void Update() {
-      
-
-
-        
-       
-
-
-    }
 
     private void OnTriggerEnter(Collider other) {
         Renderer rend = GetComponent<Renderer>();
@@ -42,7 +32,7 @@ public class PointerController : MonoBehaviour {
     private void OnTriggerStay(Collider other) {
        if (GetPlayerInput("A") == 1) {
             generatorController.AddToken(other);
-            collitionFeedbackSound.Play();
+            
        }
 
     }
