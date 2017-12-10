@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 4e4ab9dd6d94a61468df74ce5051a34d
+timeCreated: 1512873357
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Harrya_Alien9_rigged__2___1_:back
+    100004: Harrya_Alien9_rigged__2___1_:chest
+    100006: Harrya_Alien9_rigged__2___1_:head
+    100008: Harrya_Alien9_rigged__2___1_:horn1
+    100010: Harrya_Alien9_rigged__2___1_:horn2
+    100012: Harrya_Alien9_rigged__2___1_:hornEnd
+    100014: Harrya_Alien9_rigged__2___1_:jawLower
+    100016: Harrya_Alien9_rigged__2___1_:jawLowerEnd
+    100018: Harrya_Alien9_rigged__2___1_:jawUpper
+    100020: Harrya_Alien9_rigged__2___1_:jawUpperEnd
+    100022: Harrya_Alien9_rigged__2___1_:joint8
+    100024: Harrya_Alien9_rigged__2___1_:L_clavicle
+    100026: Harrya_Alien9_rigged__2___1_:L_elbow
+    100028: Harrya_Alien9_rigged__2___1_:L_fingerA1
+    100030: Harrya_Alien9_rigged__2___1_:L_fingerA2
+    100032: Harrya_Alien9_rigged__2___1_:L_fingerB1
+    100034: Harrya_Alien9_rigged__2___1_:L_fingerb2
+    100036: Harrya_Alien9_rigged__2___1_:L_hand
+    100038: Harrya_Alien9_rigged__2___1_:L_shoulder
+    100040: Harrya_Alien9_rigged__2___1_:left
+    100042: Harrya_Alien9_rigged__2___1_:left1
+    100044: Harrya_Alien9_rigged__2___1_:neck1
+    100046: Harrya_Alien9_rigged__2___1_:neck2
+    100048: Harrya_Alien9_rigged__2___1_:pCube1
+    100050: Harrya_Alien9_rigged__2___1_:pCylinder2
+    100052: Harrya_Alien9_rigged__2___1_:pCylinder3
+    100054: Harrya_Alien9_rigged__2___1_:R_clavicle
+    100056: Harrya_Alien9_rigged__2___1_:R_elbow
+    100058: Harrya_Alien9_rigged__2___1_:R_fingerA1
+    100060: Harrya_Alien9_rigged__2___1_:R_fingerA2
+    100062: Harrya_Alien9_rigged__2___1_:R_fingerB1
+    100064: Harrya_Alien9_rigged__2___1_:R_fingerb2
+    100066: Harrya_Alien9_rigged__2___1_:R_hand
+    100068: Harrya_Alien9_rigged__2___1_:R_shoulder
+    100070: Harrya_Alien9_rigged__2___1_:root
+    100072: Harrya_Alien9_rigged__2___1_:spine1
+    100074: Harrya_Alien9_rigged__2___1_:spine2
+    100076: Harrya_Alien9_rigged__2___1_:tail1
+    100078: Harrya_Alien9_rigged__2___1_:tail2
+    100080: Harrya_Alien9_rigged__2___1_:tail3
+    100082: Harrya_Alien9_rigged__2___1_:tail4
+    100084: Harrya_Alien9_rigged__2___1_:tailEnd
+    100086: ikHandle1
+    100088: ikHandle2
+    400000: //RootNode
+    400002: Harrya_Alien9_rigged__2___1_:back
+    400004: Harrya_Alien9_rigged__2___1_:chest
+    400006: Harrya_Alien9_rigged__2___1_:head
+    400008: Harrya_Alien9_rigged__2___1_:horn1
+    400010: Harrya_Alien9_rigged__2___1_:horn2
+    400012: Harrya_Alien9_rigged__2___1_:hornEnd
+    400014: Harrya_Alien9_rigged__2___1_:jawLower
+    400016: Harrya_Alien9_rigged__2___1_:jawLowerEnd
+    400018: Harrya_Alien9_rigged__2___1_:jawUpper
+    400020: Harrya_Alien9_rigged__2___1_:jawUpperEnd
+    400022: Harrya_Alien9_rigged__2___1_:joint8
+    400024: Harrya_Alien9_rigged__2___1_:L_clavicle
+    400026: Harrya_Alien9_rigged__2___1_:L_elbow
+    400028: Harrya_Alien9_rigged__2___1_:L_fingerA1
+    400030: Harrya_Alien9_rigged__2___1_:L_fingerA2
+    400032: Harrya_Alien9_rigged__2___1_:L_fingerB1
+    400034: Harrya_Alien9_rigged__2___1_:L_fingerb2
+    400036: Harrya_Alien9_rigged__2___1_:L_hand
+    400038: Harrya_Alien9_rigged__2___1_:L_shoulder
+    400040: Harrya_Alien9_rigged__2___1_:left
+    400042: Harrya_Alien9_rigged__2___1_:left1
+    400044: Harrya_Alien9_rigged__2___1_:neck1
+    400046: Harrya_Alien9_rigged__2___1_:neck2
+    400048: Harrya_Alien9_rigged__2___1_:pCube1
+    400050: Harrya_Alien9_rigged__2___1_:pCylinder2
+    400052: Harrya_Alien9_rigged__2___1_:pCylinder3
+    400054: Harrya_Alien9_rigged__2___1_:R_clavicle
+    400056: Harrya_Alien9_rigged__2___1_:R_elbow
+    400058: Harrya_Alien9_rigged__2___1_:R_fingerA1
+    400060: Harrya_Alien9_rigged__2___1_:R_fingerA2
+    400062: Harrya_Alien9_rigged__2___1_:R_fingerB1
+    400064: Harrya_Alien9_rigged__2___1_:R_fingerb2
+    400066: Harrya_Alien9_rigged__2___1_:R_hand
+    400068: Harrya_Alien9_rigged__2___1_:R_shoulder
+    400070: Harrya_Alien9_rigged__2___1_:root
+    400072: Harrya_Alien9_rigged__2___1_:spine1
+    400074: Harrya_Alien9_rigged__2___1_:spine2
+    400076: Harrya_Alien9_rigged__2___1_:tail1
+    400078: Harrya_Alien9_rigged__2___1_:tail2
+    400080: Harrya_Alien9_rigged__2___1_:tail3
+    400082: Harrya_Alien9_rigged__2___1_:tail4
+    400084: Harrya_Alien9_rigged__2___1_:tailEnd
+    400086: ikHandle1
+    400088: ikHandle2
+    2000000: Harrya_Alien9_rigged__2___1_:back
+    2000002: Harrya_Alien9_rigged__2___1_:left
+    2000004: Harrya_Alien9_rigged__2___1_:left1
+    2300000: Harrya_Alien9_rigged__2___1_:pCube1
+    3300000: Harrya_Alien9_rigged__2___1_:pCube1
+    4300000: Harrya_Alien9_rigged__2___1_:pCylinder3
+    4300002: Harrya_Alien9_rigged__2___1_:pCube1
+    7400000: Move
+    9500000: //RootNode
+    13700000: Harrya_Alien9_rigged__2___1_:pCylinder3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Harrya_Alien9_rigged__2___1__blinn1
+    second: {fileID: 2100000, guid: dd70f40121760db4085a90bbf2202352, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3a5c9fe4fcad695428c5712befcf910d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -31,6 +31,7 @@ public class PointerController : MonoBehaviour {
 
     private void OnTriggerStay(Collider other) {
        if (GetPlayerInput("A") == 1) {
+            Debug.Log("A");          
             generatorController.AddToken(other);
             
        }
@@ -38,6 +39,8 @@ public class PointerController : MonoBehaviour {
     }
 
     private int GetPlayerInput(string val) {
+
+        
         if (IsPressed("PSCR_" + val) && IsPressed("PVR_" + val)) {
             return 1;
         } else if (!IsPressed("PVR_" + val) && IsPressed("PSCR_" + val)) {
@@ -47,7 +50,7 @@ public class PointerController : MonoBehaviour {
         }
     }
 
-    private bool IsPressed(string val) {
+    private bool IsPressed(string val) {        
         return Input.GetButtonDown(val);        
     }
 

@@ -7,7 +7,10 @@ public class HealthBar : MonoBehaviour
 {
 	public Image CurrentHealthBar;
 	public Image CurrentShieldBar;
-	public Text ratioText;
+    public Image CurrentHealthBarPSCR;
+    public Image CurrentShieldBarPSCR;
+
+    public Text ratioText;
 
 	private float hitPoint = 100;
 	private float maxHitPoint = 100;
@@ -29,13 +32,21 @@ public class HealthBar : MonoBehaviour
 		//scale CurrentHealthBar based on ratio
 		CurrentHealthBar.rectTransform.localScale = new Vector3 (healthRatio, 1, 1);
 		CurrentShieldBar.rectTransform.localScale = new Vector3 (shieldRatio, 1, 1);
+        CurrentHealthBarPSCR.transform.localScale = new Vector3(healthRatio, CurrentHealthBarPSCR.transform.localScale.y, CurrentHealthBarPSCR.transform.localScale.z);
 
-		ratioText.text = ((healthRatio+shieldRatio) * 100).ToString("0") + '%';
+        CurrentShieldBarPSCR.transform.localScale = new Vector3(shieldRatio, CurrentShieldBarPSCR.transform.localScale.y, CurrentShieldBarPSCR.transform.localScale.z);
+
+        ratioText.text = ((healthRatio+shieldRatio) * 100).ToString("0") + '%';
 
 
 	}
 
-	private void TakeDamage(float damage)
+
+    private void Update() {
+        UpdateHealthBar();
+    }
+
+    private void TakeDamage(float damage)
 	{
 		if (hitShield > 0) 
 		{
@@ -53,7 +64,7 @@ public class HealthBar : MonoBehaviour
 			FindObjectOfType<GameOver>().endGame ();
 		}
 
-		UpdateHealthBar();
+		
 	}
 
 	private void HealDamage(float heal)
@@ -75,4 +86,25 @@ public class HealthBar : MonoBehaviour
 
 		UpdateHealthBar();
 	}
+
+    public void addHeal(float value) {
+
+        if (hitPoint + value > maxHitPoint) {
+            hitPoint = maxHitPoint;
+        } else {
+            hitPoint += value; 
+        }
+
+    }
+
+
+    public void addShield(float value) {
+        if (hitShield + value > maxHitShield) {
+            hitShield = maxHitShield;
+        } else {
+            hitShield += value;
+        }
+    }
+
+
 }

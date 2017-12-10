@@ -92,7 +92,7 @@ public class CameraController : MonoBehaviour {
 
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("TRI");
+
         if (other.CompareTag("PVR")) {
             GameObject ne = Instantiate(enemy);
             ne.gameObject.transform.position = transform.position;

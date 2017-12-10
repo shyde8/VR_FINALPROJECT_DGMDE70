@@ -13,12 +13,16 @@ public class GeneratorController : MonoBehaviour {
     private int[] slotValues;
 
     [SerializeField]
-    private GameObject shieldIcon, healthIcon, errorScreen;
+    private GameObject shieldIcon, healthIcon, errorScreen, announceLocation, payerReference;
 
     [SerializeField]
     private AudioClip positiveFeedbackSound, negativeFeedbackSound;
 
     private AudioSource collitionFeedbackSound;
+    private HealthBar healthBar;
+
+
+
 
 
 
@@ -28,6 +32,7 @@ public class GeneratorController : MonoBehaviour {
 	
 	void Start () {
         collitionFeedbackSound = GetComponent<AudioSource>();
+        healthBar = payerReference.GetComponent<HealthBar>();
         selectedSlots = new GameObject[transform.childCount];
         slotValues = new int[transform.childCount];
         
@@ -53,9 +58,7 @@ public class GeneratorController : MonoBehaviour {
         ShieldGeneratorColliderValue value = collider.GetComponent<ShieldGeneratorColliderValue>();
         Debug.Log(value.value);
 
-
-       
-
+     
         if (value.value == shieldValue) {
             GameObject shield = Instantiate(shieldIcon);
             shield.transform.parent = targetLocation;
@@ -83,10 +86,18 @@ public class GeneratorController : MonoBehaviour {
 
 
         if (slotValues[transform.GetChildCount() - 1] == shieldValue) {
-            Debug.Log("ADD A SHIELD POINT");            
+            Debug.Log("ADD A SHIELD POINT");
+            healthBar.addShield(25);
+            GameObject shield = Instantiate(shieldIcon);
+            shield.transform.position = announceLocation.transform.position;            
+            StartCoroutine(RemoveInMS(shield, .5f));            
             resetGenerator();
         } else if (slotValues[transform.GetChildCount() - 1] == healthValue) {            
             Debug.Log("ADD A HEALTH POINT");
+            healthBar.addHeal(25);
+            GameObject health = Instantiate(healthIcon);
+            health.transform.position = announceLocation.transform.position;
+            StartCoroutine(RemoveInMS(health, .5f));
             resetGenerator();
         }
 
@@ -97,7 +108,12 @@ public class GeneratorController : MonoBehaviour {
     IEnumerator reEnable() {
         yield return new WaitForSeconds(1);
         errorScreen.SetActive(false);
+    }
 
+
+    IEnumerator RemoveInMS(GameObject destroyMe, float time) {
+        yield return new WaitForSeconds(time);
+        Destroy(destroyMe);
     }
 
     private void resetGenerator() {
