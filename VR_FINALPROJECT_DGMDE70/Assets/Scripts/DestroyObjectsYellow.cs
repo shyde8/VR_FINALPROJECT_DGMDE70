@@ -10,7 +10,7 @@ public class DestroyObjectsYellow : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Destroy (gameObject, destroyTime);
+		//Destroy (gameObject, destroyTime);
 	}
 
 	void Update()

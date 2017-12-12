@@ -12,7 +12,12 @@ public class SpawnItemsYellow : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		InvokeRepeating ("SpawnCoins", spawnTime, spawnTime);
+		//InvokeRepeating ("SpawnCoins", spawnTime, spawnTime);
+		int spawnIndex = Random.Range (0, SpawnPoints.Length);
+		if (hasKey == false) 
+		{
+			Instantiate (Coin, SpawnPoints [spawnIndex].position, SpawnPoints [spawnIndex].rotation);
+		}
 	}
 
 	// Update is called once per frame
@@ -23,10 +28,10 @@ public class SpawnItemsYellow : MonoBehaviour {
 
 	void SpawnCoins()
 	{
-		int spawnIndex = Random.Range (0, SpawnPoints.Length);
+		/*int spawnIndex = Random.Range (0, SpawnPoints.Length);
 		if (hasKey == false) 
 		{
 			Instantiate (Coin, SpawnPoints [spawnIndex].position, SpawnPoints [spawnIndex].rotation);
-		}
+		}*/
 	}
 }
