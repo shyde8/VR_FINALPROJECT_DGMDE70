@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 052e391afadae05409c1daadf1d4a879
-timeCreated: 1513280698
+guid: 099c1b22a48104947b254a40490e5636
+timeCreated: 1513282970
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -58,7 +58,7 @@ ModelImporter:
     400048: root
     400050: spine1
     4300000: body1
-    7400000: anim
+    7400000: Take 001
     9500000: //RootNode
     13700000: body1
   externalObjects:
@@ -66,12 +66,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert2
-    second: {fileID: 2100000, guid: 43267ed1b0c527a488ba95515de2fae4, type: 2}
+    second: {fileID: 2100000, guid: bdcc75ad36b1c1b45a630007b1e556ba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert4
-    second: {fileID: 2100000, guid: b635725096c74a1489a72d9f60efa095, type: 2}
+    second: {fileID: 2100000, guid: ac1065d5b1e1307459d5af720f0bca3d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -97,35 +97,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: anim
-      takeName: Take 001
-      firstFrame: 10
-      lastFrame: 40
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -134,7 +106,7 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
+    importCameras: 1
     importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
